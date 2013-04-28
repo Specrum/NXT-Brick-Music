@@ -1,0 +1,38 @@
+import lejos.nxt.*;
+import lejos.util.*;
+
+public class Instrument
+{
+  public static void main (String[] args)
+	{
+		UlrasonicSensor sonic = new UltrasonicSensor()
+
+		while (true) {
+			int D = sonic.getDistance();
+			if (D >= 1 && D <= 3){
+				Sound.playTone (262, 100);
+			}
+			if (D >= 4 && D <= 6){
+				Sound.playTone (294, 100);
+			}
+			if (D >= 7 && D <= 9){
+				Sound.playTone (330, 100);
+			}
+			if (D >= 10 && D <= 12){
+				Sound.playTone (349, 100);
+			}
+			if (D >= 13 && D <= 15){
+				Sound.playTone (392, 100);
+			}
+			if (D >= 16 && D <= 18){
+				Sound.playTone (440, 100)
+			}
+			if (D >= 19 && D <= 21){
+				Sound.playTone (494, 100)
+			}
+			if (D >= 22 && D <= 24){
+				Sound.playTone (523, 100)
+			}
+		}
+	}
+}
